@@ -108,9 +108,6 @@ struct sigaction {
 // Specify the signal handler function
     sa.sa_handler = signal_handler;
 
-    // Clear the sa_mask, so no signals are blocked during handling
-    sigemptyset(&sa.sa_mask);
-
     // No special flags
     sa.sa_flags = 0;
 
