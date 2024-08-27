@@ -76,7 +76,6 @@ int	main(void)
 	ft_putnbr(getpid());
 	ft_putstr_fd("\n", 1);
 	sa.sa_handler = signal_handler;
-	sigemptyset(&sa.sa_mask);
 	sa.sa_flags = 0;
 	if (sigaction(SIGUSR1, &sa, NULL) == -1)
 	{
